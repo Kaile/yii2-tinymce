@@ -8,11 +8,17 @@
         {
             "name": "Moh Khoirul Anam",
             "email": "moh.khoirul.anaam@gmail.com"
+        },
+        {
+            "name": "Mikhail Kornilov",
+            "email": "mikh.kornilov@gmail.com"
         }
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "moonlandsoft/helpers": "*"
+        "moonlandsoft/helpers": "*",
+        "npm-asset/tinymce-i18n": "^20.12",
+        "npm-asset/tinymce": "^5.9"
     },
     "autoload": {
         "psr-4": {
