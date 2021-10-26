@@ -5,6 +5,8 @@ use yii\helpers\ArrayHelper;
 use yii\widgets\InputWidget;
 use yii\helpers\Html;
 use moonland\helpers\JSON;
+use Yii;
+
 /**
  * TinyMCE Extension.
  * TinyMCE is a platform independent web based Javascript HTML WYSIWYG editor control.
@@ -40,7 +42,7 @@ class TinyMCE extends InputWidget
 	/**
 	 * @var string theme of tiny mce
 	 */
-	public $theme = 'modern';
+	public $theme = 'silver';
 	/**
 	 * @var array to toggling a textarea to tinyMCE and to textarea.
 	 */
@@ -63,8 +65,8 @@ class TinyMCE extends InputWidget
 	public $plugins = [
 		'advlist autolink lists link image charmap print preview hr anchor pagebreak',
 		'searchreplace wordcount visualblocks visualchars code fullscreen',
-		'insertdatetime media nonbreaking save table contextmenu directionality',
-		'emoticons template paste textcolor',
+		'insertdatetime media nonbreaking save table directionality',
+		'emoticons template paste',
 	];
 	/**
 	 * @var array to show the toolbar.
@@ -195,6 +197,12 @@ class TinyMCE extends InputWidget
 		
 		$options = JSON::encode($this->config);
 		
+		$langFile = Yii::getAlias('@npm/tinymce-i18n/langs5/') . $this->language . '.js';
+
+		if (file_exists($langFile)) {
+			$view->registerJsFile($langFile);
+		}
+
 		TinyMCEAsset::register($view);
 		
 		if ($this->toggle['active']) {
