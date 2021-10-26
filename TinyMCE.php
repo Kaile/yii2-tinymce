@@ -30,6 +30,9 @@ class TinyMCE extends InputWidget
 	public $config = [];
 	
 	public $selector;
+
+	public $language = 'en_US';
+
 	/**
 	 * @var boolean to enable or disable advanced tab in image.
 	 */
@@ -119,6 +122,7 @@ class TinyMCE extends InputWidget
 			'plugins' => $this->plugins,
 			'templates' => $this->templates,
 			'height' => $this->height,
+			'language' => $this->language,
 		], $this->config);
 		
 		$this->config['fontsize_formats'] = "6pt 7pt 8pt 9pt 10pt 11pt 12pt 13pt 14pt 15pt 16pt 18pt 20pt 24pt 28pt 36pt 40pt 48pt";

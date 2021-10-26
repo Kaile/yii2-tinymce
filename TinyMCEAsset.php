@@ -5,7 +5,7 @@ use yii\web\AssetBundle;
 
 class TinyMCEAsset extends AssetBundle
 {
-	public $sourcePath = '@moonland/tinymce/assets';
+	public $sourcePath = '@npm/tinymce';
 	
 	public $css = [];
 	
