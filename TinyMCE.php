@@ -24,8 +24,9 @@ use Yii;
  * 
  * 
  * @author Moh Khoirul Anam <moh.khoirul.anaam@gmail.com>
+ * @author Mikhail Kornilov <mikh.kornilov@gmail.com>
  * @copyright moonlandsoft 2014
- * @since 1
+ * @since 2.0
  */
 class TinyMCE extends InputWidget
 {
