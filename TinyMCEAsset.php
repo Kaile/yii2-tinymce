@@ -1,6 +1,7 @@
 <?php
 namespace moonland\tinymce;
 
+use Yii;
 use yii\web\AssetBundle;
 
 class TinyMCEAsset extends AssetBundle

@@ -108,6 +108,13 @@ class TinyMCE extends InputWidget
 		else
 			$this->config[$name] = $value;
 	}
+
+	public function getLanguageUrl()
+	{
+		$asset = new TinyMCELangAsset();
+
+		return Yii::$app->assetManager->getPublishedUrl($asset->js[0]);
+	}
 	
 	public function setToggle($value)
 	{
@@ -126,6 +133,7 @@ class TinyMCE extends InputWidget
 			'templates' => $this->templates,
 			'height' => $this->height,
 			'language' => $this->language,
+			'language_url' => $this->getLanguageUrl(),
 		], $this->config);
 		
 		$this->config['fontsize_formats'] = "6pt 7pt 8pt 9pt 10pt 11pt 12pt 13pt 14pt 15pt 16pt 18pt 20pt 24pt 28pt 36pt 40pt 48pt";
@@ -198,13 +206,8 @@ class TinyMCE extends InputWidget
 		
 		$options = JSON::encode($this->config);
 		
-		$langFile = Yii::getAlias('@npm/tinymce-i18n/langs5/') . $this->language . '.js';
-
-		if (file_exists($langFile)) {
-			$view->registerJsFile($langFile);
-		}
-
 		TinyMCEAsset::register($view);
+		TinyMCELangAsset::register($view);
 		
 		if ($this->toggle['active']) {
 			$toggle = $this->toggle['id'];
