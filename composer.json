@@ -24,5 +24,11 @@
         "psr-4": {
             "moonland\\tinymce\\": ""
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
 }

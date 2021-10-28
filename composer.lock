@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a78e3fbf44db531326e5b16982ddafa",
+    "content-hash": "2bbb5622dc9dedf8481edb9531b5ebb1",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -364,34 +364,12 @@
             "version": "20.12.25",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/tinymce-i18n/-/tinymce-i18n-20.12.25.tgz",
-                "shasum": "479d2c69613ec2324aeadb4478c9da2d8d4e0bb8"
+                "url": "https://registry.npmjs.org/tinymce-i18n/-/tinymce-i18n-20.12.25.tgz"
             },
-            "type": "npm-asset-library",
-            "extra": {
-                "npm-asset-bugs": {
-                    "url": "https://github.com/mklkj/tinymce-i18n/issues"
-                },
-                "npm-asset-directories": [],
-                "npm-asset-repository": {
-                    "type": "git",
-                    "url": "git+https://github.com/mklkj/tinymce-i18n.git"
-                },
-                "npm-asset-scripts": {
-                    "update": "sh update.sh"
-                }
-            },
+            "type": "npm-asset",
             "license": [
                 "MIT"
-            ],
-            "description": "Languages for TinyMCE 4 and 5",
-            "homepage": "https://github.com/mklkj/tinymce-i18n",
-            "keywords": [
-                "i18n",
-                "languages",
-                "tinymce"
-            ],
-            "time": "2020-12-25T12:31:30+00:00"
+            ]
         },
         {
             "name": "paragonie/random_compat",
@@ -631,5 +609,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.1.0"
 }
