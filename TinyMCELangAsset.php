@@ -33,10 +33,10 @@ class TinyMCELangAsset extends AssetBundle
 
         $locale = preg_replace('/-/', '_', Yii::$app->language);
         $lang = explode('_', $locale)[0];
-        $langFile = "{$this->sourcePath}/{$locale}.js'";
+        $langFile = "{$locale}.js'";
 
         if ( ! file_exists($langFile) ) {
-            $langFile = "{$this->sourcePath}/{$lang}.js";
+            $langFile = "{$lang}.js";
         }
 
         $this->js[] = $langFile;
