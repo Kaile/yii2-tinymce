@@ -17,8 +17,8 @@
     "require": {
         "yiisoft/yii2": "*",
         "moonlandsoft/helpers": "*",
-        "npm-asset/tinymce-i18n": "^20.12",
-        "npm-asset/tinymce": "^5.9"
+        "npm-asset/tinymce-i18n": "^22.5",
+        "npm-asset/tinymce": "^6.2"
     },
     "autoload": {
         "psr-4": {
@@ -30,5 +30,10 @@
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
-    ]
+    ],
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
+        }
+    }
 }
