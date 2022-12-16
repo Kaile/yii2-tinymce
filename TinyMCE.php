@@ -64,10 +64,10 @@ class TinyMCE extends InputWidget
 	 * @var array tiny mce plugin
 	 */
 	public $plugins = [
-		'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+		'advlist autolink lists link image charmap preview anchor pagebreak',
 		'searchreplace wordcount visualblocks visualchars code fullscreen',
 		'insertdatetime media nonbreaking save table directionality',
-		'emoticons template paste',
+		'emoticons template',
 	];
 	/**
 	 * @var array to show the toolbar.
@@ -129,7 +129,7 @@ class TinyMCE extends InputWidget
 		$this->config = ArrayHelper::merge([
 			'style_formats_merge' => true,
 			'theme' => $this->theme,
-			'plugins' => $this->plugins,
+			'plugins' => implode(' ', $this->plugins),
 			'templates' => $this->templates,
 			'height' => $this->height,
 			'language' => $this->language,
