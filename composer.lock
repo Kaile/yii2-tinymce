@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "45f1a8cfa5a81256f1b4ded676369c45",
+    "content-hash": "b255fe3f7687a635e9423a7af4ae7bfd",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -598,10 +598,10 @@
         },
         {
             "name": "npm-asset/tinymce",
-            "version": "6.2.0",
+            "version": "6.3.1",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/tinymce/-/tinymce-6.2.0.tgz"
+                "url": "https://registry.npmjs.org/tinymce/-/tinymce-6.3.1.tgz"
             },
             "type": "npm-asset",
             "license": [
