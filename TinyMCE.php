@@ -2,9 +2,9 @@
 namespace moonland\tinymce;
 
 use yii\helpers\ArrayHelper;
-use yii\widgets\InputWidget;
 use yii\helpers\Html;
-use moonland\helpers\JSON;
+use yii\helpers\Json;
+use yii\widgets\InputWidget;
 use Yii;
 
 /**
@@ -206,7 +206,7 @@ class TinyMCE extends InputWidget
 		
 		$this->config = ArrayHelper::merge(['selector' => $id], $this->config);
 		
-		$options = JSON::encode($this->config);
+		$options = Json::encode($this->config);
 		
 		TinyMCEAsset::register($view);
 		TinyMCELangAsset::register($view);

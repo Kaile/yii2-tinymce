@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c59f5464a1931d193576205422dffbea",
+    "content-hash": "b8cd1736c938ed0e678ca5e048e12926",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -205,50 +205,6 @@
                 "source": "https://github.com/ezyang/htmlpurifier/tree/v4.19.0"
             },
             "time": "2025-10-17T16:34:55+00:00"
-        },
-        {
-            "name": "moonlandsoft/helpers",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/moonlandsoft/helpers.git",
-                "reference": "8a8c981b17112f04e1da0bd0de8d56adfb8e5adf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/moonlandsoft/helpers/zipball/8a8c981b17112f04e1da0bd0de8d56adfb8e5adf",
-                "reference": "8a8c981b17112f04e1da0bd0de8d56adfb8e5adf",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "moonland\\helpers\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Moh Khoirul Anam",
-                    "email": "moh.khoirul.anaam@gmail.com"
-                }
-            ],
-            "description": "Helper for all widgets",
-            "keywords": [
-                "extension",
-                "yii2"
-            ],
-            "support": {
-                "issues": "https://github.com/moonlandsoft/helpers/issues",
-                "source": "https://github.com/moonlandsoft/helpers/tree/master"
-            },
-            "time": "2015-01-23T14:45:15+00:00"
         },
         {
             "name": "npm-asset/tinymce",
