@@ -44,8 +44,9 @@ if (TinyMCE_Compressor::getParam("js")) {
  * ));
  */
 class TinyMCE_Compressor {
-	private $files, $settings;
-	private static $defaultSettings = array(
+	private string $files = "";
+	private array $settings;
+	private static array $defaultSettings = array(
 		"plugins"    => "",
 		"themes"     => "",
 		"languages"  => "",
@@ -68,6 +69,8 @@ class TinyMCE_Compressor {
 		if (empty($this->settings["cache_dir"])) {
 			$this->settings["cache_dir"] = dirname(__FILE__);
 		}
+		
+		$this->files = "";
 	}
 
 	/**
@@ -75,7 +78,7 @@ class TinyMCE_Compressor {
 	 *
 	 * @param String $path Path to the file to include in the compressed package/output.
 	 */
-	public function &addFile($file) {
+	public function addFile($file) {
 		$this->files .= ($this->files ? "," : "") . $file;
 
 		return $this;
@@ -85,7 +88,7 @@ class TinyMCE_Compressor {
 	 * Handles the incoming HTTP request and sends back a compressed script depending on settings and client support.
 	 */
 	public function handleRequest() {
-		$files = array();
+		$files = [];
 		$supportsGzip = false;
 		$expiresOffset = $this->parseTime($this->settings["expires"]);
 		$tinymceDir = dirname(__FILE__);
@@ -179,7 +182,7 @@ class TinyMCE_Compressor {
 		}
 
 		// Generate hash for all files
-		$hash = md5(implode('', $allFiles));
+		$hash = md5(implode(',', array_filter($allFiles)));
 
 		// Check if it supports gzip
 		$zlibOn = ini_get('zlib.output_compression') || (ini_set('zlib.output_compression', 0) === false);
@@ -362,4 +365,3 @@ class TinyMCE_Compressor {
 		return $content;
 	}
 }
-?>

@@ -101,12 +101,14 @@ class TinyMCE extends InputWidget
 	
 	public function __set($name, $value)
 	{
-		if (method_exists($this, 'set' . ucfirst($name)))
-			parent::__set($name, $value);
-		elseif (isset($this->{$name}))
+		$setter = 'set' . ucfirst($name);
+		if (method_exists($this, $setter)) {
+			$this->$setter($value);
+		} elseif (isset($this->{$name})) {
 			$this->{$name} = $value;
-		else
+		} else {
 			$this->config[$name] = $value;
+		}
 	}
 
 	public function getLanguageUrl()
